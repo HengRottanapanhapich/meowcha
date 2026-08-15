@@ -14,25 +14,30 @@
 }
 
 #hTextWrapper {
-    padding-top: 19rem;
+    padding-top: 21rem;
     display: flex;
     justify-content: center;
-}
-
-#hTextContainer {
-    text-align: center;
 }
 
 #hTextContainer h1 {
     color: var(--creamLightGreen);
     font-family: "League Spartan", sans-serif;
     font-size: 9rem;
+    line-height: 0.8;
 }
 
 #hTextContainer p {
     color: var(--creamLightGreen);
     font-family: "Poppins", sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+#paraRight {
+    text-align: right;
+}
+
+#centerButton {
+    text-align: center;
 }
 
 #hTextContainer button {
@@ -53,4 +58,57 @@
     color: var(--lightGreen);
     scale: 1.07;
     cursor: pointer;
+}
+
+#trustBarContainer {
+    width: 100vw;
+    height: 30vw;
+}
+
+#trustBarBackground {
+    height: 100%;
+    background-image: url(../../assets/trustBarBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#circleContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.circleWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.tTextContainer {
+    font-family: "Poppins", sans-serif;
+    width: 23rem;
+    text-align: center;
+}
+
+.tTextContainer p {
+    color: var(--creamLightGreen);
+}
+
+.header {
+    font-size: 1.1rem;
+    color: var(--darkGreen);
+    font-weight: 600;
+}
+
+.circle {
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--darkGreen);
+    border-radius: 50%;
 }
