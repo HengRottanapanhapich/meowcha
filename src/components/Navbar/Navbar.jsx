@@ -31,8 +31,8 @@ function Navbar() {
                 </div>
 
                 <div className={styles.navButtonContainer}>
-                    <Link to="/RegisterPage"><button id={styles.register}>Register</button></Link>
-                    <Link to="/LoginPage"><button id={styles.login}>Login</button></Link>
+                    <Link to="/Registerpage"><button id={styles.register}>Register</button></Link>
+                    <Link to="/Loginpage"><button id={styles.login}>Login</button></Link>
                 </div>
 
 

@@ -1,0 +1,124 @@
+.loginContainer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 3.5rem;
+    background-color: var(--brown);
+}
+
+.logoContainer {
+    position: relative;
+    z-index: 3;
+    width: 13rem;
+}
+
+.logoContainer img {
+    width: 100%;
+}
+.loginForm_container {
+    width: 35%;
+    height: 25rem;
+    padding: 2rem 2rem;
+    position: relative;
+    z-index: 3;
+    background-color: var(--darkerCream);
+    border: 1px solid var(--orange);
+    border-radius: 1rem;
+}
+.loginLabel_container {
+    position: relative;
+    z-index: 3;
+}
+.loginLabel_container h1{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+.loginLabel_container button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 1.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--orange);
+    color: white;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+.loginLabel_container label {
+    display: block;
+    color: var(--brown);
+    font-family: sans-serif;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+}
+.loginLabel_container input[type="text"],.loginLabel_container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid var(--orange);
+    border-radius: 0.7rem;
+    background-color: var(--darkerCream);
+    color: #65512f;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.03rem;
+    line-height: 1.3rem;
+}
+
+.loginLabel_container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--orange);
+    border-radius: 0.7rem;
+    background-color: var(--darkerCream);
+    color: #65512f;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.03rem;
+    line-height: 1.3rem;
+}
+
+.loginLabel_container input:focus,.loginLabel_container textarea:focus {
+    border-color: var(--darkRed);
+    background-color: #c28f63;
+    color: white;
+    outline: none;
+}
+
+.dhAccount {
+    padding-bottom: 2rem;
+    color: rgb(183, 158, 112);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.dhAccount a {
+    font-size: 0.9rem;
+    color: rgb(183, 158, 112);
+}
+
+.dhAccount a:hover {
+    color: rgb(229, 164, 42);
+}
+
+.backgroundStyle {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(../assets/backgroundStyle3.jpg);
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
