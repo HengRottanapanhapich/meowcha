@@ -6,11 +6,12 @@
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    gap: 3.5rem;
+    gap: 9rem;
     background-color: var(--brown);
 }
 
 .logoContainer {
+    padding-top: 2rem;
     position: relative;
     z-index: 3;
     width: 13rem;
@@ -25,8 +26,9 @@
     padding: 2rem 2rem;
     position: relative;
     z-index: 3;
-    background-color: var(--darkerCream);
-    border: 1px solid var(--orange);
+    background-color: var(--creamLightGreen);
+    /* border: 1px solid var(--orange); */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 1rem;
 }
 .loginLabel_container {
@@ -34,11 +36,12 @@
     z-index: 3;
 }
 .loginLabel_container h1{
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+    /* text-decoration: underline; */
+    /* text-decoration-thickness: 2px; */
+    font-family: "League Spartan", sans-serif;
     text-align: center;
     font-size: 2.5rem;
-    color: var(--orange);
+    color: var(--darkGreen);
 }
 .loginLabel_container button {
     display: block;
@@ -46,7 +49,7 @@
     padding: 0.5rem 1.8rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: var(--orange);
+    background-color: var(--darkGreen);
     color: white;
     cursor: pointer;
     transition: 200ms ease;
@@ -62,10 +65,10 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 30px;
-    border: 1px solid var(--orange);
+    border: 1px solid var(--darkGreen);
     border-radius: 0.7rem;
-    background-color: var(--darkerCream);
-    color: #65512f;
+    background-color: var(--creanLightGreen);
+    color: #53652f;
     font-family: sans-serif;
     font-size: 0.9rem;
     letter-spacing: 0.03rem;
@@ -76,9 +79,9 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 2rem;
-    border: 1px solid var(--orange);
+    border: 1px solid var(--darkGreen);
     border-radius: 0.7rem;
-    background-color: var(--darkerCream);
+    background-color: var(--creamLightGreen);
     color: #65512f;
     font-family: sans-serif;
     font-size: 0.9rem;
@@ -88,25 +91,26 @@
 
 .loginLabel_container input:focus,.loginLabel_container textarea:focus {
     border-color: var(--darkRed);
-    background-color: #c28f63;
+    background-color: #6fa05e;
     color: white;
     outline: none;
 }
 
 .dhAccount {
+    font-family: "Poppins", sans-serif;
     padding-bottom: 2rem;
-    color: rgb(183, 158, 112);
+    color: rgb(109, 136, 84);
     font-size: 0.9rem;
     text-align: center;
 }
 
 .dhAccount a {
     font-size: 0.9rem;
-    color: rgb(183, 158, 112);
+    color: rgb(109, 136, 84);
 }
 
 .dhAccount a:hover {
-    color: rgb(229, 164, 42);
+    color: rgb(145, 181, 111);
 }
 
 .backgroundStyle {
@@ -115,8 +119,7 @@
     top: 0;
     left: 0;
     position: absolute;
-    background-image: url(../assets/backgroundStyle3.jpg);
-    opacity: 0.2;
+    background-image: url(../../assets/registerLogin.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

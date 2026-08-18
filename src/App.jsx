@@ -4,6 +4,7 @@ import './App.css'
 import Homepage from './pages/Homepage/Homepage.jsx'
 // import Aboutpage from './pages/Aboutpage/Aboutpage.jsx'
 import Contactpage from './pages/Contactpage/Contactpage.jsx'
+import Loginpage from './pages/Loginpage/Loginpage.jsx'
 import Registerpage from './pages/Registerpage/Registerpage.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 
@@ -22,7 +23,7 @@ function App() {
             <Route path='/Contactpage' element={<Contactpage/>}/>
             {/* <Route path='/Shoppage' element={<Shoppage/>}/> */}
             <Route path='/Registerpage' element={<Registerpage/>}/>
-            {/* <Route path='/Loginpage' element={<Loginpage/>}/> */}
+            <Route path='/Loginpage' element={<Loginpage/>}/>
         </Routes>
         </>
     );

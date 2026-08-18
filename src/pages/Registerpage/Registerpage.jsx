@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Registerpage.module.css'
-import logo from '../../assets/MEOWCHA!(1).svg'
+import logo from '../../assets/MEOWCHAGreen.svg'
 function Registerpage() {
 
     const [formData, setFormData] = useState({
@@ -26,10 +26,9 @@ function Registerpage() {
 
     return(
         <div className={styles.registerContainer}>
-
             <div className={styles.logoContainer}>
                 <Link to="/">
-                    <img id={styles.logo} src={logo} alt="Bongkert logo"></img>
+                    <img id={styles.logo} src={logo} alt="Meowcha logo"></img>
                 </Link>
             </div>
             <div className={styles.registerForm_container}>
@@ -44,12 +43,13 @@ function Registerpage() {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="********" value={formData.password} onChange={handleChange}/>
 
-                    <label htmlFor="password">Confirm password</label>
-                    <input type="password" id="password" name="password" placeholder="********" value={formData.password} onChange={handleChange}/>
+                    {/* <label htmlFor="password">Confirm password</label>
+                    <input type="password" id="password" name="password" placeholder="********" value={formData.password} onChange={handleChange}/> */}
+
+                    <p className={styles.dhAccount}>Already have an account?<Link to='/Loginpage'>Login here!</Link></p>
 
                     <button type="submit">Send</button>
                 </form>
-
             </div>
 
             <div className={styles.backgroundStyle}></div>

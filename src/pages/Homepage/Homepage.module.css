@@ -2,7 +2,7 @@
     overflow: hidden;
     width: 100vw;
     max-width: 100vw;
-    height: 91.5vh;
+    height: 94vh;
 }
 
 #heroImage {
@@ -124,7 +124,7 @@
 
 #showContainer {
     width: 100vw;
-    padding-top: 2rem;
+    padding-top: 3rem;
     background-color: var(--creamGreen);
 }
 

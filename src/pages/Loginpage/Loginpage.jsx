@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styles from './Loginpage.module.css'
-// import logo from '../../src/assets/logo1.svg'
+import logo from '../../assets/MEOWCHAGreen.svg'
 
 function Loginpage () {
     const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ function Loginpage () {
         
             <div className={styles.logoContainer}>
                 <Link to="/">
-                    {/* <img id={styles.logo} src={logo} alt="Bongkert logo"></img> */}
+                    <img id={styles.logo} src={logo} alt="meowcha logo"></img>
                 </Link>
             </div>
             <div className={styles.loginForm_container}>
@@ -41,7 +41,7 @@ function Loginpage () {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="********" value={formData.password} onChange={handleChange}/>
 
-                    <p className={styles.dhAccount}>Don't have an account yet?<Link>Register here!</Link></p>
+                    <p className={styles.dhAccount}>Don't have an account yet?<Link to='/Registerpage'>Register here!</Link></p>
 
                     <button type="submit">Send</button>
                 </form>
