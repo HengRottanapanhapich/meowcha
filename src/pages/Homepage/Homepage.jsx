@@ -8,7 +8,7 @@ import circleImg3 from '../../assets/highQuality.jpg'
 import topOpening from '../../assets/topOpening.jpg'
 import hImg1 from '../../assets/hImg1.jpg'
 import hImg2 from '../../assets/hImg2.jpg'
-import contactImg from '../../assets/contactSection.jpg'
+// import contactImg from '../../assets/contactSection.png'
 
 function Homepage() {
     return(
@@ -117,7 +117,7 @@ function Homepage() {
                 <div id={styles.cTextContainer}>
                     <h1>Contact us</h1>
                     <p>Contact us if you ever need anything</p>
-                    <div id={styles.centerButton1}><Link to="/Contactpagw"><button id={styles.contactButton}>Contact here</button></Link></div>
+                    <div id={styles.centerButton1}><Link to="/Contactpage"><button id={styles.contactButton}>Contact here</button></Link></div>
                 </div>
             </div>
         </div>

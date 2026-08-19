@@ -26,7 +26,7 @@ function Navbar() {
                 
                 <div className={styles.logoContainer}>
                     <Link to="/">
-                        <a href="#" id={styles.logo}><img src={logo} alt="meowcha logo"></img></a>
+                        <img id={styles.logo} src={logo} alt="meowcha logo"></img>
                     </Link>
                 </div>
 

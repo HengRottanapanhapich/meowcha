@@ -81,12 +81,17 @@
 }
 
 .logoContainer {
-    width: 27rem;
-    padding-right: 14rem;
+    /* width: 27rem; */
+    padding-right: 12rem;
 }
 
 .logoContainer img {
     width: 100%;
+}
+
+#logo {
+    width: 12rem;
+    height: auto;
 }
 
 .navLinks a {

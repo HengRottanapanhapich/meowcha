@@ -139,17 +139,17 @@
 }
 
 #oTextContainer {
-    padding-top: 5rem;
+    padding-top: 8.5rem;
     padding-left: 3rem;
 }
 
 #oTextContainer h2 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-family: "League Spartan", sans-serif;
 }
 
 #paraContainer {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-family: "Poppins", sans-serif;
     color: var(--darkGreen);
     display: flex;
@@ -243,7 +243,7 @@
     flex-direction: column;
     gap: 2rem;
     padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 #contactContainer {
@@ -253,7 +253,7 @@
 
 #contactImg {
     height: 100%;
-    background-image: url(../../assets/contactSection.jpg);
+    background-image: url(../../assets/contactSection.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
