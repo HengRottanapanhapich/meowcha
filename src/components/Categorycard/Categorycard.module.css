@@ -1,0 +1,41 @@
+.categoryCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--darkGreen);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 150ms ease;
+}
+
+.categoryCard:hover .circle {
+    transform: scale(1.04);
+}
+
+.circleSelected {
+    outline: 3px solid var(--matchaGreen);
+    outline-offset: 3px;
+}
+
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categoryCard p {
+    margin-top: 12px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: var(--darkGreen);
+}

@@ -1,0 +1,63 @@
+#shopHeroContainer {
+    width: 100vw;
+    height: auto;
+}
+
+#heroBackgroundImg {
+    width: 100%;
+    height: 85vh;
+    background-image: url(../../assets/heroBackgroundImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#textContainer1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--creamLightGreen);
+}
+
+#textContainer1 h2 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 3rem;
+}
+
+#textContainer1 p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+}
+
+.promoBanner {
+    margin: 0 4rem 2.5rem;
+    height: 25rem;
+    border-radius: 14px;
+    background-color: var(--matchaGreen);
+    background-image: url(../../assets/promoBanner.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+#textContainer2 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promoBanner p {
+    color: #fff;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+    margin: 0;
+    padding: 0 1.5rem;
+}
+
+

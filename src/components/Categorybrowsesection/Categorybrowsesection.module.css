@@ -1,0 +1,40 @@
+.section {
+    width: 100%;
+    padding: 0 4rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.headerRow {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+}
+
+.headerRow h3 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.4rem;
+    color: var(--darkGreen);
+    margin: 0;
+}
+
+.clearBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--clay, #b6673f);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.emptyState {
+    font-family: "Poppins", sans-serif;
+    color:#6b6a5f;
+    font-size: 1rem;
+}

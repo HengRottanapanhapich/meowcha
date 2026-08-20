@@ -1,0 +1,25 @@
+.categorySection {
+    width: 100%;
+    padding: 3rem 4rem;
+    /* box-sizing: border-box; */
+    background-color: var(--creamLightGreen);
+}
+
+.categorySection h2 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.8rem;
+    color: var(--darkGreen);
+    margin-bottom: 1.8rem;
+}
+
+.categoryGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.emptyState {
+    font-family: "Poppins", sans-serif;
+    color: #6b6a5f;
+    font-size: 1rem;
+}
