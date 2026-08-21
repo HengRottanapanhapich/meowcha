@@ -7,13 +7,13 @@ function Aboutpage() {
     return(
         <>
         <div id={styles.aboutHeroContainer}>
-            <div id={styles.heroImg}>
+            <div id="heroImg" className={styles.heroImg}>
                 <div id={styles.heroHeader}><h1>ABOUT US</h1></div>
             </div>
         </div>
 
         <div id={styles.aboutContainer}>
-            <div id={styles.section1}>
+            <div id='getToKnowUs' className={styles.section1}>
                 <div id={styles.textContainer1}>
                     <h2>Get to know us</h2>
                     <div id={styles.paraContainer1}>
@@ -28,7 +28,7 @@ function Aboutpage() {
                 <div id={styles.img1}><img src={img1} alt="" /></div>
             </div>
 
-            <div id={styles.section2}>
+            <div id='ourAims' className={styles.section2}>
                 <div id={styles.textWrapper1}>
                     <div id={styles.textContainer2}>
                         <h2>Our aims</h2>
@@ -49,7 +49,7 @@ function Aboutpage() {
                 <div id={styles.img2}><img src={img2} alt="" /></div>
             </div>
 
-            <div id={styles.section3}>
+            <div id='whatWeStandFor' className={styles.section3}>
                 <div id={styles.img3}><img src={img3} alt="" /></div>
 
                 <div id={styles.textWrapper2}>

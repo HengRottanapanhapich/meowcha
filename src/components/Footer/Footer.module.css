@@ -1,0 +1,48 @@
+#logo {
+    width: 15rem;
+}
+
+#footerContainer {
+    background-color: var(--creamLightGreen);
+    /* border-top: 1px solid var(--darkGreen); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#columnWrapper {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 8rem;
+    padding: 5rem 3rem 3rem 3rem;
+}
+
+.footerListContainer {
+    list-style: none;
+}
+
+.footerListContainer a {
+    text-decoration: none;
+    font-family: "Poppins";
+    color: var(--darkGreen);
+}
+
+.footerListContainer li {
+    padding-bottom: 0.8rem;
+}
+
+.topText {
+    color: var(--matchaGreen);
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5rem;
+}
+
+#columnContainer {
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+}

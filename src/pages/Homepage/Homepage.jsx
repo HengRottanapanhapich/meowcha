@@ -18,7 +18,7 @@ import matchaType3 from "../../assets/matchaType3.jpg"
 function Homepage() {
     return(
         <>
-        <div id={styles.heroWrapper}>
+        <div id='mainPage' className={styles.heroWrapper}>
             <div id={styles.heroImage}>
                 <div id={styles.hTextWrapper}>
                     <div id={styles.hTextContainer}>

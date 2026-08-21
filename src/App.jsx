@@ -9,6 +9,7 @@ import Loginpage from './pages/Loginpage/Loginpage.jsx'
 import Registerpage from './pages/Registerpage/Registerpage.jsx'
 // import AdminPanel from './pages/AdminPanel/AdminPanel.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
+import Footer from './components/Footer/Footer.jsx'
 // import Protectedroute from './components/Protectedroute/Protectedroute.jsx'
 import { AuthProvider } from './Authcontext.jsx'
 
@@ -17,6 +18,9 @@ function App() {
 
     const hideNavbar = ['/Registerpage', '/Loginpage']
     const showNavbar = !hideNavbar.includes(location.pathname)
+
+    const hideFooter = ['/RegisterPage', '/LoginPage']
+    const showFooter = !hideFooter.includes(location.pathname)
 
     return(
         <AuthProvider>
@@ -37,6 +41,7 @@ function App() {
                     }
                 /> */}
             </Routes>
+            {showFooter && <Footer/>}
         </AuthProvider>
     );
 }

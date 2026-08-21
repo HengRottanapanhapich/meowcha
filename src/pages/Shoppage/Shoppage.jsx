@@ -16,7 +16,7 @@ function Shoppage() {
 
     return(
         <>
-        <div id={styles.shopHeroContainer}>
+        <div id='browseOurShop' className={styles.shopHeroContainer}>
             <div id={styles.heroBackgroundImg}>
                 <div id={styles.textContainer1}>
                     <h2>FIND YOUR CALM, FIND YOU MORNING</h2>
@@ -25,23 +25,28 @@ function Shoppage() {
             </div>
         </div>
 
-        <CategorySection
-            selectedCategory={selectedCategory}
-            onSelectCategory={handleSelectCategory}
-        />
-
-        <div className={styles.promoBanner}>
-            <div id={styles.textContainer2}><p>GET OFFER FROM 20 to 50%</p></div>
-        </div>
-
-        <BestSellerSection />
-
-        {selectedCategory && (
-            <CategoryBrowseSection
-                category={selectedCategory}
-                onClear={() => setSelectedCategory(null)}
+        <div id='shopByCategory' className={styles.categoryS}>
+            <CategorySection
+                selectedCategory={selectedCategory}
+                onSelectCategory={handleSelectCategory}
             />
-        )}
+        </div>
+        
+
+        <div className={styles.productArea}>
+            <div className={styles.promoBanner}>
+                <div id={styles.textContainer2}><p>GET OFFER FROM 20 to 50%</p></div>
+            </div>
+
+            <div id='ourBestSeller' className={styles.bestSeller}><BestSellerSection /></div>
+
+            {selectedCategory && (
+                <CategoryBrowseSection
+                    category={selectedCategory}
+                    onClear={() => setSelectedCategory(null)}
+                />
+            )}
+        </div>
 
         </>
     );

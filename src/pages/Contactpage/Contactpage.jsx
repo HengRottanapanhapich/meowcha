@@ -25,7 +25,7 @@ function Contactpage() {
     return(
         <>
         <div className={styles.contactContainer}>
-            <div className={styles.cWrapper}>
+            <div id='contactUs' className={styles.cWrapper}>
                 <div className={styles.cTextContainer}>
                     <div id={styles.cHContainer}><h1>Contact</h1></div>
                     <div id={styles.cPContainer}><p>Contact us if you have any trouble, or if you want to do business with us. We will get back to you as soon as possible.</p></div>

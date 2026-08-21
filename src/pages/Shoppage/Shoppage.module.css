@@ -1,4 +1,4 @@
-#shopHeroContainer {
+.shopHeroContainer {
     width: 100vw;
     height: auto;
 }
@@ -10,6 +10,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.categoryS {
+    width: 100vw;
+    height: auto;
 }
 
 #textContainer1 {
@@ -29,6 +34,13 @@
 #textContainer1 p {
     font-family: "Poppins", sans-serif;
     font-size: 1.3rem;
+}
+
+.productArea {
+    width: 100vw;
+    height: auto;
+    background-color: var(--creamGreen);
+    padding: 7rem 0rem;
 }
 
 .promoBanner {
