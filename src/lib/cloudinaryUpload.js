@@ -1,21 +1,21 @@
 // src/lib/cloudinaryUpload.js
+const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+const UPLOAD_PRESET = "ecommerce_products"
+
 export async function uploadImageToCloudinary(file) {
     const formData = new FormData()
-    formData.append('file', file)
-    formData.append('upload_preset', 'ecommerce_products')
+    formData.append("file", file)
+    formData.append("upload_preset", UPLOAD_PRESET)
 
     const response = await fetch(
-        `https://api.cloudinary.com/v1_1/repfdmql/image/upload`,
-        {
-            method: 'POST',
-            body: formData,
-        }
+        `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+        { method: "POST", body: formData }
     )
 
     if (!response.ok) {
-        throw new Error('Image upload failed')
+        throw new Error("Image upload failed")
     }
 
     const data = await response.json()
-    return data.secure_url 
+    return data.secure_url // permanent hosted URL save this in Firestore
 }

@@ -9,7 +9,7 @@ import Loginpage from './pages/Loginpage/Loginpage.jsx'
 import Registerpage from './pages/Registerpage/Registerpage.jsx'
 // import AdminPanel from './pages/AdminPanel/AdminPanel.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
-import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute.jsx'
+// import Protectedroute from './components/Protectedroute/Protectedroute.jsx'
 import { AuthProvider } from './Authcontext.jsx'
 
 function App() {
@@ -31,9 +31,9 @@ function App() {
                 {/* <Route
                     path='/AdminPanel'
                     element={
-                        <ProtectedRoute requireAdmin>
+                        <Protectedroute requireAdmin>
                             <AdminPanel/>
-                        </ProtectedRoute>
+                        </Protectedroute>
                     }
                 /> */}
             </Routes>
