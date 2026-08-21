@@ -1,13 +1,23 @@
 import styles from './Sidebar.module.css'
-import logo from '../../assets/MEOWCHA!(1).svg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../Authcontext.jsx'
 
 
 function Sidebar({ isOpen, onClose }) {
+    const { currentUser, role, logout } = useAuth()
+    const navigate = useNavigate()
+
+    async function handleLogout() {
+        await logout()
+        onClose()
+        navigate('/')
+    }
+
     return (
         <>
             <div
                 className={`${styles.overlay} ${isOpen ? styles.overlayOpen : ''}`}
+                onClick={onClose}
             />
             <aside className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : ''}`}>
                 <button className={styles.closeBtn} onClick={onClose} aria-label="Close menu">
@@ -16,15 +26,40 @@ function Sidebar({ isOpen, onClose }) {
                     </svg>
                 </button>
 
+                {currentUser && (
+                    <div className={styles.profileBlock}>
+                        <span className={styles.avatarCircle}>
+                            {(currentUser.displayName || currentUser.email || '?').charAt(0).toUpperCase()}
+                        </span>
+                        <p className={styles.profileName}>
+                            {currentUser.displayName || currentUser.email}
+                        </p>
+                    </div>
+                )}
+
                 <ul className={styles.sidebarLinks}>
                     <li><Link to="/" onClick={onClose}>Home</Link></li>
                     <li><Link to="/AboutPage" onClick={onClose}>About</Link></li>
                     <li><Link to="/ContactPage" onClick={onClose}>Contact</Link></li>
                     <li><Link to="/ShopPage" onClick={onClose}>Shop</Link></li>
+                    {role === 'admin' && (
+                        <li><Link to="/AdminPanel" onClick={onClose}>Admin</Link></li>
+                    )}
                 </ul>
 
                 <div className={styles.SideButtonContainer}>
-                    <button id={styles.login}>Login</button>
+                    {currentUser ? (
+                        <button id={styles.logout} onClick={handleLogout}>Logout</button>
+                    ) : (
+                        <>
+                            <Link to="/Loginpage" onClick={onClose}>
+                                <button id={styles.login}>Login</button>
+                            </Link>
+                            <Link to="/Registerpage" onClick={onClose}>
+                                <button id={styles.register}>Register</button>
+                            </Link>
+                        </>
+                    )}
                 </div>
             </aside>
         </>

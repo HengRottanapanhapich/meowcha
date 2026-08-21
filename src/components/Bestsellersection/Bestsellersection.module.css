@@ -1,7 +1,7 @@
 .section {
     width: 100%;
     padding: 2.5rem 4rem;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .section h3 {
@@ -14,7 +14,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 280px));
-    gap: 5rem;
+    gap: 6rem;
 }
 
 .emptyState {

@@ -39,6 +39,38 @@
     margin-bottom: 2rem;
 }
 
+.profileBlock {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.avatarCircle {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background-color: var(--darkGreen);
+    color: var(--creamLightGreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.profileName {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--darkGreen);
+    word-break: break-word;
+}
+
 .sidebarLinks {
     list-style: none;
     padding: 0;
@@ -80,6 +112,13 @@
     width: 100%;
 }
 
+.sideButtonContainer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
 .closeBtn {
     background: none;
     border: none;
@@ -93,12 +132,40 @@
     color: var(--orange);
 } */
 
-#login {
+#login, #register, #logout {
     padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 25px;
-    /* background-color: var(--orange); */
-    /* color: var(--cream); */
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    transition: 200ms ease;
+    cursor: pointer;
+    background-color: var(--darkGreen);
+    color: var(--creamLightGreen);
+}
+
+#register {
+    background-color: transparent;
+    border: 1.5px solid var(--darkGreen);
+    color: var(--darkGreen);
+}
+
+#logout {
+    background-color: transparent;
+    border: 1.5px solid #a1462f;
+    color: #a1462f;
+}
+
+#login:hover, #register:hover, #logout:hover {
+    opacity: 0.8;
+    scale: 1.03;
+}
+
+
+/* #login {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
     font-weight: 700;
     font-family: "Inter", sans-serif;
     transition: 200ms ease;
@@ -110,4 +177,4 @@
     color: #dcd6c3;
     scale: 1.07;
     cursor: pointer
-}
+} */

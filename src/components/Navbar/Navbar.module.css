@@ -135,6 +135,82 @@
     cursor: pointer;
 }
 
+.profileContainer {
+    position: relative;
+}
+
+.profileButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.avatarCircle {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background-color: var(--lightGreen);
+    color: var(--darkGreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+
+.profileDropdown {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    min-width: 12rem;
+    background-color: var(--creamLightGreen);
+    border-radius: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+}
+
+.profileName {
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--darkGreen);
+    margin: 0 0 0.6rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.dropdownLink {
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    color: var(--darkGreen);
+    text-decoration: none;
+    padding: 0.4rem 0;
+}
+
+.dropdownLink:hover {
+    opacity: 0.7;
+}
+
+.logoutButton {
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #a1462f;
+    padding: 0.4rem 0 0;
+    margin-top: 0.3rem;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+
 @media (max-width: 965px) {
 
     .navWrapper {

@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Registerpage.module.css'
 import logo from '../../assets/MEOWCHAGreen.svg'
+import { useAuth } from '../../Authcontext.jsx'
+
 function Registerpage() {
 
     const [formData, setFormData] = useState({
@@ -9,6 +11,11 @@ function Registerpage() {
         email: '',
         password: '',
     })
+    const [error, setError] = useState('')
+    const [submitting, setSubmitting] = useState(false)
+
+    const { register } = useAuth()
+    const navigate = useNavigate()
 
     function handleChange(event) {
         const { name, value } = event.target
@@ -18,10 +25,26 @@ function Registerpage() {
         }))
     }
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault()
-        console.log(formData)
-        // send formData somewhere later (backend/API)
+        setError('')
+        setSubmitting(true)
+
+        try {
+            await register(formData.name, formData.email, formData.password)
+            // new accounts are always customers, so straight to Shop
+            navigate('/Shoppage')
+        } catch (err) {
+            if (err.code === 'auth/email-already-in-use') {
+                setError('An account with this email already exists.')
+            } else if (err.code === 'auth/weak-password') {
+                setError('Password should be at least 6 characters.')
+            } else {
+                setError('Something went wrong. Please try again.')
+            }
+        } finally {
+            setSubmitting(false)
+        }
     }
 
     return(
@@ -43,12 +66,13 @@ function Registerpage() {
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="********" value={formData.password} onChange={handleChange}/>
 
-                    {/* <label htmlFor="password">Confirm password</label>
-                    <input type="password" id="password" name="password" placeholder="********" value={formData.password} onChange={handleChange}/> */}
+                    {error && <p className={styles.errorText}>{error}</p>}
 
                     <p className={styles.dhAccount}>Already have an account?<Link to='/Loginpage'>Login here!</Link></p>
 
-                    <button type="submit">Send</button>
+                    <button type="submit" disabled={submitting}>
+                        {submitting ? 'Creating account...' : 'Send'}
+                    </button>
                 </form>
             </div>
 
