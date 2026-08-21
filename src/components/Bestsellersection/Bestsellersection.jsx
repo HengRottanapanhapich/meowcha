@@ -1,5 +1,5 @@
 import styles from './Bestsellersection.module.css'
-import ProductCard from '../ProductCard/Productcard.jsx'
+import ProductCard from '../Productcard/Productcard.jsx'
 
 const mockBestSellers = [
     { id: 1, name: "Matcha powder", price: 25.00, image: "", description: "High quality matcha powder, straight from Japan." },

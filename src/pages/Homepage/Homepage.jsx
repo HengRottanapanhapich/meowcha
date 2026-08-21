@@ -8,6 +8,11 @@ import circleImg3 from '../../assets/highQuality.jpg'
 import topOpening from '../../assets/topOpening.jpg'
 import hImg1 from '../../assets/hImg1.jpg'
 import hImg2 from '../../assets/hImg2.jpg'
+import matchaType1 from '../../assets/matchaType1.jpg'
+import matchaType2 from '../../assets/matchaType2.jpg'
+import matchaType3 from "../../assets/matchaType3.jpg"
+
+
 // import contactImg from '../../assets/contactSection.png'
 
 function Homepage() {
@@ -73,15 +78,39 @@ function Homepage() {
                 <div id={styles.typeHeaderContainer}><h2>Types of matcha:</h2></div>
                 <div id={styles.matchaTypeWrapper}>
                     <div className={styles.matchaTypeContainer}>
-                        <div className={styles.matchaType}><img src="" alt="" /></div>
+                        <div className={styles.matchaType}><img src={matchaType1} alt="" /></div>
+                        <div className={styles.matchaTypeTextContainer}>
+                            <h2>Culinary grade</h2>
+                            <ul>
+                                <li>Best use: Baking smoothies, cooking, and ice cream</li>
+                                <li>Color: Dull green, dark green, or yellowish</li>
+                                <li>Taste: Strong, earthy, and quite bitter</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div className={styles.matchaTypeContainer}>
-                        <div className={styles.matchaType}><img src="" alt="" /></div>
+                        <div className={styles.matchaType}><img src={matchaType2} alt="" /></div>
+                        <div className={styles.matchaTypeTextContainer}>
+                            <h2>Premium grade</h2>
+                            <ul>
+                                <li>Best use: Daily drinking and matcha lattes</li>
+                                <li>Color: Vibrant green, slightly less bring than ceremonial grade</li>
+                                <li>Taste: A bit more bold and slightly more bitter, balanced with mild sweetness</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div className={styles.matchaTypeContainer}>
-                        <div className={styles.matchaType}><img src="" alt="" /></div>
+                        <div className={styles.matchaType}><img src={matchaType3} alt="" /></div>
+                        <div className={styles.matchaTypeTextContainer}>
+                            <h2>Ceremonial grade</h2>
+                            <ul>
+                                <li>Best use: Traditional tea preperation mixed only with hot water</li>
+                                <li>Color: Bright, vivid emerald green</li>
+                                <li>Taste: smooth, naturally sweet, and rich in umami with almost no bitterness</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
