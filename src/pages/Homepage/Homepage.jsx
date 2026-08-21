@@ -2,7 +2,7 @@ import styles from './Homepage.module.css'
 import { Link } from 'react-router-dom';
 
 // import trustBarBackground from '../../assets/trustBarBackground.jpg'
-import circleImg1 from '../../assets/guidance.jpg'
+import circleImg1 from '../../assets/Guidance.jpg'
 import circleImg2 from '../../assets/allOverTheWorld.jpg'
 import circleImg3 from '../../assets/highQuality.jpg'
 import topOpening from '../../assets/topOpening.jpg'

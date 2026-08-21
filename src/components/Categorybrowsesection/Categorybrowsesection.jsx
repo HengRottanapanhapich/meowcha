@@ -1,5 +1,5 @@
 import styles from './Categorybrowsesection.module.css'
-import ProductCard from '../ProductCard/Productcard.jsx'
+import ProductCard from '../Productcard/Productcard.jsx'
 
 const mockProductsByCategory = {
     "Matcha": [
