@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import badgeStyles from './UsersSection.module.css'
+import badgeStyles from './Userssection.module.css'
 import { PageHeader, Table, IconLink, FilterBar, SearchInput, Adminuistyles as ui } from "../Adminui"
 import { subscribeToCollection, updateDocument } from "../../../lib/Firestorecrud"
 
