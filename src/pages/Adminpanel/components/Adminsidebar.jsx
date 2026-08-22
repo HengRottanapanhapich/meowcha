@@ -1,12 +1,13 @@
 import styles from './Adminsidebar.module.css'
 import { useAuth } from "../../../Authcontext.jsx"
 import { useNavigate } from "react-router-dom"
+import logo from '../../../assets/MEOWCHA!(1).svg'
 
 const items = [
-    { key: "products", label: "Products", hint: "Add, edit, remove" },
-    { key: "categories", label: "Categories", hint: "Matcha, Bowl, Whisk…" },
-    { key: "suppliers", label: "Suppliers", hint: "Companies & sourcing" },
-    { key: "users", label: "Users", hint: "Enable / disable" },
+    { key: "products", label: "Products"},
+    { key: "categories", label: "Categories"},
+    { key: "suppliers", label: "Suppliers"},
+    { key: "users", label: "Users"},
 ]
 
 function Adminsidebar({ section, setSection }) {
@@ -21,7 +22,7 @@ function Adminsidebar({ section, setSection }) {
     return (
         <aside className={styles.sidebar}>
             <div className={styles.brand}>
-                <div className={styles.brandName}>Meowcha</div>
+                <div className={styles.brandName}><img src={logo} alt="meowcha logo" /></div>
                 <div className={styles.brandSub}>Admin Console</div>
             </div>
             <nav className={styles.nav}>

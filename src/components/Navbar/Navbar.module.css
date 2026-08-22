@@ -249,6 +249,10 @@
         display: none;
     }
 
+    #register {
+        display: none;
+    }
+
     .buttonContainer {
         display: none;
     }
