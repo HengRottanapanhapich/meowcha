@@ -13,7 +13,7 @@ const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState(null)
-    const [role, setRole] = useState(null)
+    const [role, setRole] = useState(null) // "admin" | "customer" | null
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -42,6 +42,7 @@ export function AuthProvider({ children }) {
             name,
             email,
             role: 'customer',
+            status: 'active',
             createdAt: new Date().toISOString(),
         })
 

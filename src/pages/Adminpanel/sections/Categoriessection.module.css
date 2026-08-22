@@ -1,0 +1,34 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.emptyState {
+    background: #ffffff;
+    border: 1px solid #ddd6c1;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    color: #6b6a5f;
+    font-size: 13px;
+}
+
+.categoryCard {
+    background: #ffffff;
+    border: 1px solid #ddd6c1;
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.categoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoryName {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 17px;
+    color: #2b2a24;
+}

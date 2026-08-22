@@ -44,6 +44,7 @@
     /* text-decoration-thickness: 2px; */
     font-family: "League Spartan", sans-serif;
     text-align: center;
+    /* font-size: 2.5rem; */
     font-size: 2.5rem;
     color: var(--darkGreen);
 }
@@ -71,6 +72,7 @@
     font-family: sans-serif;
     font-weight: 500;
     padding-bottom: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .registerLabel_container input[type="text"], .registerLabel_container input[type="email"], .registerLabel_container input[type="password"]{
@@ -132,4 +134,65 @@
     background-position: center;
     background-size: cover;
     z-index: 1;
+}
+
+@media (max-width: 1300px) {
+    .registerForm_container {
+        width: 42%;
+    }
+}
+
+@media (max-width: 950px) {
+    .registerForm_container {
+        width: 52%;
+    }
+
+    .registerLabel_container h1 {
+        font-size: 2rem;
+    }
+
+    .registerLabel_container input[type="text"], .registerLabel_container input[type="email"], .registerLabel_container input[type="password"] {
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+
+    .dhAccount {
+        font-size: 0.7rem;
+    }
+
+    .dhAccount a {
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .registerForm_container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .registerForm_container {
+        width: 78%;
+    }
+}
+
+@media (max-width: 450px) {
+    .registerForm_container {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .registerLabel_container input[type="text"], .registerLabel_container input[type="email"], .registerLabel_container input[type="password"] {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+
+    .registerLabel_container label {
+        font-size: 0.7rem;
+    }
+
+    .registerLabel_container h1 {
+        font-size: 1.5rem;
+    }
 }

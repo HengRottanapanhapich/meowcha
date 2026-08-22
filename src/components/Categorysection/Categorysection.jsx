@@ -1,23 +1,25 @@
+import { useEffect, useState } from 'react'
 import styles from './Categorysection.module.css'
 import CategoryCard from '../Categorycard/Categorycard.jsx'
-
-const mockCategories = [
-    { id: 1, name: "Matcha", image: "" },
-    { id: 2, name: "Whisk", image: "" },
-    { id: 3, name: "Bowl", image: "" },
-    { id: 4, name: "Matcha set", image: "" },
-]
+import { subscribeToCollection } from '../../lib/Firestorecrud'
 
 function CategorySection({ selectedCategory, onSelectCategory }) {
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+        const unsubscribe = subscribeToCollection('categories', setCategories, 'name')
+        return unsubscribe
+    }, [])
+
     return (
         <div className={styles.categorySection}>
             <h2>Categories</h2>
 
-            {mockCategories.length === 0 ? (
+            {categories.length === 0 ? (
                 <p className={styles.emptyState}>No category yet</p>
             ) : (
                 <div className={styles.categoryGrid}>
-                    {mockCategories.map(category => (
+                    {categories.map(category => (
                         <CategoryCard
                             key={category.id}
                             category={category}

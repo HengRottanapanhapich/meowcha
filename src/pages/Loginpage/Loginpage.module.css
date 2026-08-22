@@ -145,3 +145,65 @@
     background-size: cover;
     z-index: 1;
 }
+
+@media (max-width: 1300px) {
+    .loginForm_container {
+        width: 42%;
+    }
+}
+
+@media (max-width: 950px) {
+    .loginForm_container {
+        width: 52%;
+    }
+
+    .loginLabel_container h1 {
+        font-size: 2rem;
+    }
+
+    .loginLabel_container input[type="email"], .loginLabel_container input[type="password"] {
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+
+    .dhAccount {
+        font-size: 0.7rem;
+    }
+
+    .dhAccount a {
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .loginrForm_container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .loginForm_container {
+        width: 78%;
+    }
+}
+
+@media (max-width: 450px) {
+    .loginForm_container {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .loginLabel_container input[type="email"], .loginLabel_container input[type="password"] {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+
+    .loginLabel_container label {
+        font-size: 0.7rem;
+    }
+
+    .loginLabel_container h1 {
+        font-size: 1.5rem;
+    }
+}
+

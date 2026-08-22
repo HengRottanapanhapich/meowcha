@@ -1,0 +1,151 @@
+.pageContainer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+}
+
+.stateContainer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #6b6a5f;
+}
+
+.backLink {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--darkGreen, #33422a);
+    font-weight: 600;
+}
+
+.backButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--darkGreen, #33422a);
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.detailGrid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 2.5rem;
+}
+
+.imageBlock img,
+.imagePlaceholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 14px;
+    background: var(--creamGreen, #ece6d4);
+}
+
+.categoryLabel {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--matchaGreen, #4a5d3a);
+}
+
+.name {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.8rem;
+    margin: 4px 0 8px;
+    color: #2b2a24;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    color: #2b2a24;
+}
+
+.description {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #6b6a5f;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+}
+
+.section {
+    margin-bottom: 1.2rem;
+}
+
+.sectionLabel {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6b6a5f;
+    margin-bottom: 8px;
+}
+
+.colorRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.colorPill,
+.colorPillOn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1.5px solid #ddd6c1;
+    background: #ffffff;
+    color: #6b6a5f;
+}
+
+.colorPillOn {
+    border-color: var(--matchaGreen, #4a5d3a);
+    background: var(--matchaGreen, #4a5d3a);
+    color: #ffffff;
+}
+
+.setList {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.85rem;
+    color: #6b6a5f;
+    line-height: 1.7;
+}
+
+.stock {
+    font-size: 0.8rem;
+    color: #6b6a5f;
+    margin-bottom: 1rem;
+}
+
+.addToCart {
+    background: var(--matchaGreen, #4a5d3a);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.addToCart:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+    .detailGrid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -7,14 +7,13 @@ import Sidebar from '../Sidebar/Sidebar'
 import { useAuth } from '../../Authcontext.jsx'
 
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false); // sidebar
-    const [profileOpen, setProfileOpen] = useState(false); // dropdown
+    const [isOpen, setIsOpen] = useState(false);
+    const [profileOpen, setProfileOpen] = useState(false);
     const dropdownRef = useRef(null)
 
     const { currentUser, role, logout } = useAuth()
     const navigate = useNavigate()
 
-    // close the dropdown when clicking anywhere outside of it
     useEffect(() => {
         function handleClickOutside(event) {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -43,10 +42,14 @@ function Navbar() {
                 <div className={styles.navWrapper}>
                     <nav className="narbar">
                         <ul className={styles.navLinks}>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/AboutPage">About</Link></li>
-                            <li><Link to ="/ContactPage">Contact</Link></li>
-                            <li><Link to ="/ShopPage">Shop</Link></li>
+                            {role !== 'admin' && (
+                                <>
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/AboutPage">About</Link></li>
+                                    <li><Link to ="/ContactPage">Contact</Link></li>
+                                    <li><Link to ="/ShopPage">Shop</Link></li>
+                                </>
+                            )}
                             {role === 'admin' && <li><Link to="/AdminPanel">Admin</Link></li>}
                         </ul>
                     </nav>

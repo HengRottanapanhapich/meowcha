@@ -38,10 +38,14 @@ function Sidebar({ isOpen, onClose }) {
                 )}
 
                 <ul className={styles.sidebarLinks}>
-                    <li><Link to="/" onClick={onClose}>Home</Link></li>
-                    <li><Link to="/AboutPage" onClick={onClose}>About</Link></li>
-                    <li><Link to="/ContactPage" onClick={onClose}>Contact</Link></li>
-                    <li><Link to="/ShopPage" onClick={onClose}>Shop</Link></li>
+                    {role !== 'admin' && (
+                        <>
+                            <li><Link to="/" onClick={onClose}>Home</Link></li>
+                            <li><Link to="/AboutPage" onClick={onClose}>About</Link></li>
+                            <li><Link to="/ContactPage" onClick={onClose}>Contact</Link></li>
+                            <li><Link to="/ShopPage" onClick={onClose}>Shop</Link></li>
+                        </>
+                    )}
                     {role === 'admin' && (
                         <li><Link to="/AdminPanel" onClick={onClose}>Admin</Link></li>
                     )}

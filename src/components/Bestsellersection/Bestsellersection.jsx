@@ -1,23 +1,27 @@
+import { useEffect, useState } from 'react'
 import styles from './Bestsellersection.module.css'
 import ProductCard from '../Productcard/Productcard.jsx'
-
-const mockBestSellers = [
-    { id: 1, name: "Matcha powder", price: 25.00, image: "", description: "High quality matcha powder, straight from Japan." },
-    { id: 2, name: "Pink bowl", price: 40.00, image: "", description: "High quality pink aesthetic matcha bowl, with a mix of white and pink together." },
-    { id: 3, name: "Smiski matcha set", price: 10.00, image: "", description: "Highly hand-crafted Smiski set." },
-    { id: 4, name: "Smiski matcha set", price: 10.00, image: "", description: "Highly hand-crafted Smiski set." },
-]
+import { subscribeToCollection } from '../../lib/Firestorecrud'
 
 function BestSellerSection() {
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        const unsubscribe = subscribeToCollection('products', setProducts, 'name')
+        return unsubscribe
+    }, [])
+
+    const bestSellers = products.filter((p) => p.isBestSeller)
+
     return (
         <div className={styles.section}>
             <h3>Best seller:</h3>
 
-            {mockBestSellers.length === 0 ? (
+            {bestSellers.length === 0 ? (
                 <p className={styles.emptyState}>No best sellers yet</p>
             ) : (
                 <div className={styles.grid}>
-                    {mockBestSellers.map(product => (
+                    {bestSellers.map(product => (
                         <ProductCard key={product.id} product={product} />
                     ))}
                 </div>

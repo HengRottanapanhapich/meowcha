@@ -1,0 +1,313 @@
+.pageHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--matchaGreen);
+    margin-bottom: 4px;
+}
+
+.pageTitle {
+    font-family: 'League Spartan', 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--darkGreen);
+}
+
+/* ---------- Buttons ---------- */
+.primaryButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 9px;
+    background: var(--darkGreen);
+    color: var(--creamLightGreen);
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 150ms ease, transform 100ms ease;
+}
+
+.primaryButton:hover {
+    background: var(--matchaGreen);
+}
+
+.primaryButton:active {
+    transform: translateY(1px);
+}
+
+.primaryButton:disabled {
+    background: #b7c2a4;
+    cursor: not-allowed;
+}
+
+.ghostButton {
+    padding: 10px 18px;
+    border: 1.5px solid #dde3cd;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--darkGreen);
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 150ms ease, border-color 150ms ease;
+}
+
+.ghostButton:hover {
+    background: var(--creamGreen);
+    border-color: var(--matchaGreen);
+}
+
+/* ---------- Table ---------- */
+.tableWrap {
+    background: #ffffff;
+    border: 1px solid #dde3cd;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+
+.table thead th {
+    text-align: left;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #69765a;
+    background: var(--creamGreen);
+    padding: 12px 18px;
+    border-bottom: 1px solid #dde3cd;
+}
+
+.table tbody td {
+    padding: 13px 18px;
+    color: var(--darkGreen);
+    border-bottom: 1px solid #eef1e4;
+    vertical-align: middle;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background: #fbfcf6;
+}
+
+.tableActionsCell {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.emptyRow {
+    text-align: center;
+    padding: 32px 18px;
+    color: #93a084;
+    font-style: italic;
+}
+
+/* ---------- Icon / inline links ---------- */
+.iconLink {
+    border: none;
+    background: none;
+    color: var(--matchaGreen);
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 120ms ease;
+}
+
+.iconLink:hover {
+    background: var(--creamGreen);
+    text-decoration: underline;
+}
+
+.iconLinkDanger {
+    composes: iconLink;
+    color: #c0453a;
+}
+
+.iconLinkDanger:hover {
+    background: #fbeae7;
+}
+
+/* ---------- Pill / badge ---------- */
+.pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--creamGreen);
+    color: var(--darkGreen);
+    font-size: 11.5px;
+    font-weight: 600;
+}
+
+/* ---------- Confirm bar ---------- */
+.confirmBar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fbeae7;
+    border: 1px solid #f0c6bd;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.confirmLabel {
+    font-size: 12px;
+    color: #8a352a;
+}
+
+.confirmDeleteBtn {
+    border: none;
+    background: #c0453a;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.confirmDeleteBtn:hover {
+    background: #a3392f;
+}
+
+.confirmCancelBtn {
+    border: none;
+    background: transparent;
+    color: #69765a;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.confirmCancelBtn:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Form fields ---------- */
+.label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #69765a;
+    margin-bottom: 6px;
+}
+
+.input,
+.select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #dde3cd;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 13.5px;
+    color: var(--darkGreen);
+    font-family: inherit;
+    outline: none;
+    transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.input:focus,
+.select:focus {
+    border-color: var(--matchaGreen);
+    box-shadow: 0 0 0 3px rgba(113, 135, 41, 0.15);
+}
+
+.searchInput {
+    padding: 9px 14px;
+    border: 1.5px solid #dde3cd;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 13px;
+    min-width: 260px;
+    outline: none;
+    font-family: inherit;
+}
+
+.searchInput:focus {
+    border-color: var(--matchaGreen);
+    box-shadow: 0 0 0 3px rgba(113, 135, 41, 0.15);
+}
+
+.filterBar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+/* ---------- Form card (add / edit) ---------- */
+.formCard {
+    background: #ffffff;
+    border: 1px solid #dde3cd;
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 24px;
+}
+
+.formCardTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--darkGreen);
+    margin-bottom: 16px;
+}
+
+.formGrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.formActions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ---------- Info banner ---------- */
+.infoBanner {
+    background: var(--creamGreen);
+    border: 1px solid #dde3cd;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    color: #4c5940;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+    .formGrid2 {
+        grid-template-columns: 1fr;
+    }
+
+    .pageHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .searchInput {
+        min-width: 0;
+        width: 100%;
+    }
+}

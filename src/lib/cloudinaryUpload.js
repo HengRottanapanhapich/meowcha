@@ -1,4 +1,3 @@
-// src/lib/cloudinaryUpload.js
 const CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
 const UPLOAD_PRESET = "ecommerce_products"
 
